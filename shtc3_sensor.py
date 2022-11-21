@@ -13,7 +13,7 @@ sht = adafruit_shtc3.SHTC3(i2c)
 while True:
     temperature, relative_humidity = sht.measurements
     print(time.ctime())
-    print("Temperature: %0.1f F" % temperature * 1.8 + 32)
-    print("Humidity: %0.1f %%" % relative_humidity)
+    print(f"Temperature: {temperature * 1.8 + 32}F")
+    print(f"Humidity: {relative_humidity}%")
     print("")
     time.sleep(60)
