@@ -1,0 +1,4 @@
+adafruit_shtc3
+os
+prometheus_client
+time
