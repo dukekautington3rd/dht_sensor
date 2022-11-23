@@ -1,4 +1,4 @@
-adafruit_shtc3
+adafruit-circuitpython-shtc3
 os
 prometheus_client
 time
