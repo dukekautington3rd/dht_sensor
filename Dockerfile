@@ -5,7 +5,7 @@ LABEL MAINTAINER="lonkaut@gmail.com"
 RUN python3 -m venv /tmp/prometheus_client/venv
 
 COPY requirements.txt /tmp/prometheus_client/
-RUN pip install --upgrade pip && \
+RUN pip --cache-dir /tmp/prometheus_client/venv install --upgrade pip && \
 . /tmp/prometheus_client/venv/bin/activate && \
 pip --cache-dir /tmp/prometheus_client/venv install -r /tmp/prometheus_client/requirements.txt
 
