@@ -5,7 +5,8 @@ LABEL MAINTAINER="lonkaut@gmail.com"
 RUN python3 -m venv /tmp/prometheus_client/venv
 
 COPY requirements.txt /tmp/prometheus_client/
-RUN . /tmp/prometheus_client/venv/bin/activate && pip install -r /tmp/prometheus_client/requirements.txt
+RUN . /tmp/prometheus_client/venv/bin/activate && \
+pip --cache-dir /tmp/prometheus_client/venv install -r /tmp/prometheus_client/requirements.txt
 
 COPY shtc3_sensor_prom.py /tmp/prometheus_client/main.py
 
