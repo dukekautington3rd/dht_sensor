@@ -1,4 +1,4 @@
-FROM --platform=arm32v7 python:3.11-alpine
+FROM --platform=linux/arm/v7 python:3.11-alpine
 USER nobody
 LABEL MAINTAINER="lonkaut@gmail.com"
 
