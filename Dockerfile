@@ -1,7 +1,14 @@
-FROM python:3.11-alpine
+FROM python:3.11-alpine AS buildprep
+
+RUN apk update && \
+apk add gcc
+
+
+FROM buildprep
 USER nobody
 LABEL MAINTAINER="lonkaut@gmail.com"
 
+RUN python3 -m venv /tmp/prometheus_client/venv
 RUN python3 -m venv /tmp/prometheus_client/venv
 
 COPY requirements.txt /tmp/prometheus_client/
