@@ -12,3 +12,4 @@ services:
       - 8188:8188
     environment:
       - TZ=America/Chicago
+      - room=${room}
