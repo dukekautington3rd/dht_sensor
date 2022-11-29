@@ -1,7 +1,6 @@
 FROM python:3.11.0-slim-bullseye AS buildprep
 
 RUN apt-get update && \
-#apt-get install -y python3 python3-pip python3-venv
 apt-get install -y gcc
 
 RUN python3 -m venv /tmp/prometheus_client/venv
