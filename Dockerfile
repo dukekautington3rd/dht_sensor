@@ -1,14 +1,12 @@
-FROM python:3.11-alpine AS buildprep
+FROM debian:bullseye AS buildprep
 
-RUN apk update && \
-apk add gcc
+RUN apt-get update && \
+apt-get install -y gcc python3 python3-pip python3-venv
 
 
 FROM buildprep
-USER nobody
 LABEL MAINTAINER="lonkaut@gmail.com"
 
-RUN python3 -m venv /tmp/prometheus_client/venv
 RUN python3 -m venv /tmp/prometheus_client/venv
 
 COPY requirements.txt /tmp/prometheus_client/
