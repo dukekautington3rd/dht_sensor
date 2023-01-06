@@ -1,7 +1,7 @@
 *Prerequisits for deploying on a container worker host*
 
 ```
-sudo tee -a /etc/modules <<eof
+sudo tee -a /etc/modules <<eof>/dev/null
 i2c-bcm2708
 i2c-dev
 eof
