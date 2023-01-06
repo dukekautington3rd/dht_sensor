@@ -9,7 +9,7 @@ eof
 * This enables the i2c interface *
 
 ```
-sudo sed -i 's/\#dtparam=i2c_arm=on/dtparam=i2c_arm=on/' /boot/config.txt
+sudo sed -i 's/\#dtparam=i2c_arm=on/dtparam=i2c_arm=on/' /boot/config.txt && sudo reboot
 ```
 
 *If you need to install Docker*
