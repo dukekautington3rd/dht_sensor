@@ -14,4 +14,27 @@ sudo sed -i 's/\#dtparam=i2c_arm=on/dtparam=i2c_arm=on/' /boot/config.txt && sud
 
 *If you need to install Docker*
 
-https://docs.docker.com/engine/install/debian/#install-using-the-convenience-script
+```
+sudo apt-get install -y docker.io docker-compose
+```
+*Enable non-root to interact with docker*
+```
+sudo usermod -aG docker $USER
+```
+
+*Clone this repo*
+```
+git clone https://github.com/dukekautington3rd/dht_sensor.git
+```
+
+*Customize for your environment*
+```
+cd dht_sensor && \
+echo "room=My Room" > .env 
+```
+
+*Bring it up!*
+```
+cd dht_sensor ; \
+docker-compose up -d
+``` 
